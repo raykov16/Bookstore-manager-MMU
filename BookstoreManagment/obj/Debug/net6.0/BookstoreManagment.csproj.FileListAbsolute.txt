@@ -1,0 +1,17 @@
+C:\Users\ASUS\source\repos\BookstoreManagment\BookstoreManagment\bin\Debug\net6.0\BookstoreManagment.exe
+C:\Users\ASUS\source\repos\BookstoreManagment\BookstoreManagment\bin\Debug\net6.0\BookstoreManagment.deps.json
+C:\Users\ASUS\source\repos\BookstoreManagment\BookstoreManagment\bin\Debug\net6.0\BookstoreManagment.runtimeconfig.json
+C:\Users\ASUS\source\repos\BookstoreManagment\BookstoreManagment\bin\Debug\net6.0\BookstoreManagment.dll
+C:\Users\ASUS\source\repos\BookstoreManagment\BookstoreManagment\bin\Debug\net6.0\BookstoreManagment.pdb
+C:\Users\ASUS\source\repos\BookstoreManagment\BookstoreManagment\obj\Debug\net6.0\BookstoreManagment.csproj.AssemblyReference.cache
+C:\Users\ASUS\source\repos\BookstoreManagment\BookstoreManagment\obj\Debug\net6.0\BookstoreManagment.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ASUS\source\repos\BookstoreManagment\BookstoreManagment\obj\Debug\net6.0\BookstoreManagment.AssemblyInfoInputs.cache
+C:\Users\ASUS\source\repos\BookstoreManagment\BookstoreManagment\obj\Debug\net6.0\BookstoreManagment.AssemblyInfo.cs
+C:\Users\ASUS\source\repos\BookstoreManagment\BookstoreManagment\obj\Debug\net6.0\BookstoreManagment.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\source\repos\BookstoreManagment\BookstoreManagment\obj\Debug\net6.0\BookstoreManagment.dll
+C:\Users\ASUS\source\repos\BookstoreManagment\BookstoreManagment\obj\Debug\net6.0\refint\BookstoreManagment.dll
+C:\Users\ASUS\source\repos\BookstoreManagment\BookstoreManagment\obj\Debug\net6.0\BookstoreManagment.pdb
+C:\Users\ASUS\source\repos\BookstoreManagment\BookstoreManagment\obj\Debug\net6.0\BookstoreManagment.genruntimeconfig.cache
+C:\Users\ASUS\source\repos\BookstoreManagment\BookstoreManagment\obj\Debug\net6.0\ref\BookstoreManagment.dll
+C:\Users\ASUS\source\repos\BookstoreManagment\BookstoreManagment\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\ASUS\source\repos\BookstoreManagment\BookstoreManagment\obj\Debug\net6.0\BookstoreManagment.csproj.CopyComplete

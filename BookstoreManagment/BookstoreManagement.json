@@ -1,0 +1,398 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "price": 19.99,
+      "quantity": 10,
+      "description": "Classic tale of wealth, love, and tragedy."
+    },
+    {
+      "id": 2,
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "price": 12.99,
+      "quantity": 5,
+      "description": "Innocence and injustice in the American South."
+    },
+    {
+      "id": 3,
+      "title": "1984",
+      "author": "George Orwell",
+      "price": 9.99,
+      "quantity": 15,
+      "description": "Dystopian society ruled by Big Brother."
+    },
+    {
+      "id": 4,
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "price": 17.99,
+      "quantity": 8,
+      "description": "Love, manners, and societal expectations."
+    },
+    {
+      "id": 5,
+      "title": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "price": 11.99,
+      "quantity": 12
+    },
+    {
+      "id": 6,
+      "title": "Moby-Dick",
+      "author": "Herman Melville",
+      "price": 16.99,
+      "quantity": 3,
+      "description": "The hunt for the legendary white whale."
+    },
+    {
+      "id": 7,
+      "title": "The Lord of the Rings",
+      "author": "J.R.R. Tolkien",
+      "price": 30.99,
+      "quantity": 20,
+      "description": "Epic fantasy journey to destroy the One Ring."
+    },
+    {
+      "id": 8,
+      "title": "Jane Eyre",
+      "author": "Charlotte Brontë",
+      "price": 13.99,
+      "quantity": 6,
+      "description": "Orphaned governess finds love and independence."
+    },
+    {
+      "id": 9,
+      "title": "Brave New World",
+      "author": "Aldous Huxley",
+      "price": 10.99,
+      "quantity": 9,
+      "description": "Future society of genetic engineering and control."
+    },
+    {
+      "id": 10,
+      "title": "The Odyssey",
+      "author": "Homer",
+      "price": 18.99,
+      "quantity": 4,
+      "description": "Epic tale of Odysseus' journey home from Troy."
+    },
+    {
+      "id": 11,
+      "title": "The Hobbit",
+      "author": "J.R.R. Tolkien",
+      "price": 15.99,
+      "quantity": 7,
+      "description": "Bilbo Baggins' unexpected adventure."
+    },
+    {
+      "id": 12,
+      "title": "Fahrenheit 451",
+      "author": "Ray Bradbury",
+      "price": 11.99,
+      "quantity": 11,
+      "description": "A world where books are banned and burned."
+    },
+    {
+      "id": 13,
+      "title": "The Alchemist",
+      "author": "Paulo Coelho",
+      "price": 19.99,
+      "quantity": 13,
+      "description": "A journey of self-discovery and following dreams."
+    },
+    {
+      "id": 14,
+      "title": "The Great Expectations",
+      "author": "Charles Dickens",
+      "price": 12.99,
+      "quantity": 6
+    },
+    {
+      "id": 15,
+      "title": "The Adventures of Huckleberry Finn",
+      "author": "Mark Twain",
+      "price": 14.99,
+      "quantity": 9,
+      "description": "Huck's journey down the Mississippi River."
+    },
+    {
+      "id": 16,
+      "title": "The Stranger",
+      "author": "Albert Camus",
+      "price": 10.99,
+      "quantity": 7,
+      "description": "Existential exploration of human absurdity."
+    },
+    {
+      "id": 17,
+      "title": "The Chronicles of Narnia",
+      "author": "C.S. Lewis",
+      "price": 29.99,
+      "quantity": 3,
+      "description": "Children's fantasy series with Christian allegories."
+    },
+    {
+      "id": 18,
+      "title": "One Hundred Years of Solitude",
+      "author": "Gabriel García Márquez",
+      "price": 13.99,
+      "quantity": 5,
+      "description": "Family saga blending reality and magical realism."
+    },
+    {
+      "id": 19,
+      "title": "Anna Karenina",
+      "author": "Leo Tolstoy",
+      "price": 27.99,
+      "quantity": 10,
+      "description": "Passionate love and tragic consequences."
+    },
+    {
+      "id": 20,
+      "title": "The Picture of Dorian Gray",
+      "author": "Oscar Wilde",
+      "price": 11.99,
+      "quantity": 8,
+      "description": "The corruption of a young man's soul."
+    },
+    {
+      "id": 21,
+      "title": "The Brothers Karamazov",
+      "author": "Fyodor Dostoevsky",
+      "price": 14.99,
+      "quantity": 6,
+      "description": "Philosophical exploration of faith and morality."
+    },
+    {
+      "id": 22,
+      "title": "Crime and Punishment",
+      "author": "Fyodor Dostoevsky",
+      "price": 25.99,
+      "quantity": 9,
+      "description": "Mental anguish and guilt after a crime."
+    },
+    {
+      "id": 23,
+      "title": "Lord of the Flies",
+      "author": "William Golding",
+      "price": 9.99,
+      "quantity": 15,
+      "description": "Children stranded on an island turn savage."
+    },
+    {
+      "id": 24,
+      "title": "The Divine Comedy",
+      "author": "Dante Alighieri",
+      "price": 24.99,
+      "quantity": 4,
+      "description": "Epic journey through Hell, Purgatory, and Heaven."
+    },
+    {
+      "id": 25,
+      "title": "Frankenstein",
+      "author": "Mary Shelley",
+      "price": 13.99,
+      "quantity": 8,
+      "description": "The creation of life and its consequences."
+    },
+    {
+      "id": 26,
+      "title": "The Grapes of Wrath",
+      "author": "John Steinbeck",
+      "price": 11.99,
+      "quantity": 12,
+      "description": "The struggles of Depression-era migrant workers."
+    },
+    {
+      "id": 27,
+      "title": "A Tale of Two Cities",
+      "author": "Charles Dickens",
+      "price": 25.01,
+      "quantity": 6,
+      "description": "Love and sacrifice during the French Revolution."
+    },
+    {
+      "id": 28,
+      "title": "Slaughterhouse-Five",
+      "author": "Kurt Vonnegut",
+      "price": 10.99,
+      "quantity": 9,
+      "description": "A nonlinear account of World War II experiences."
+    },
+    {
+      "id": 29,
+      "title": "The Count of Monte Cristo",
+      "author": "Alexandre Dumas",
+      "price": 28.99,
+      "quantity": 4,
+      "description": "A tale of revenge and redemption."
+    },
+    {
+      "id": 30,
+      "title": "The Scarlet Letter",
+      "author": "Nathaniel Hawthorne",
+      "price": 15.99,
+      "quantity": 7,
+      "description": "The consequences of adultery and guilt."
+    },
+    {
+      "id": 31,
+      "title": "The Iliad",
+      "author": "Homer",
+      "price": 11.99,
+      "quantity": 11
+    },
+    {
+      "id": 32,
+      "title": "A Farewell to Arms",
+      "author": "Ernest Hemingway",
+      "price": 9.99,
+      "quantity": 13,
+      "description": "Love and loss during World War I."
+    },
+    {
+      "id": 33,
+      "title": "The Old Man and the Sea",
+      "author": "Ernest Hemingway",
+      "price": 12.99,
+      "quantity": 6,
+      "description": "An old fisherman's battle with a marlin."
+    },
+    {
+      "id": 34,
+      "title": "The Canterbury Tales",
+      "author": "Geoffrey Chaucer",
+      "price": 14.99,
+      "quantity": 9,
+      "description": "Collection of stories told by pilgrims."
+    },
+    {
+      "id": 35,
+      "title": "Beloved",
+      "author": "Toni Morrison",
+      "price": 10.99,
+      "quantity": 7,
+      "description": "Haunted by the memories of slavery."
+    },
+    {
+      "id": 36,
+      "title": "Heart of Darkness",
+      "author": "Joseph Conrad",
+      "price": 29.99,
+      "quantity": 3,
+      "description": "Journey up the Congo River and into the human soul."
+    },
+    {
+      "id": 37,
+      "title": "The Sun Also Rises",
+      "author": "Ernest Hemingway",
+      "price": 13.99,
+      "quantity": 5,
+      "description": "Expatriates in post-World War I Europe."
+    },
+    {
+      "id": 38,
+      "title": "Wuthering Heights",
+      "author": "Emily Brontë",
+      "price": 17.99,
+      "quantity": 10,
+      "description": "Love and revenge on the Yorkshire moors."
+    },
+    {
+      "id": 39,
+      "title": "A Clockwork Orange",
+      "author": "Anthony Burgess",
+      "price": 11.99,
+      "quantity": 8
+    },
+    {
+      "id": 40,
+      "title": "Gone with the Wind",
+      "author": "Margaret Mitchell",
+      "price": 10.99,
+      "quantity": 6,
+      "description": "Love and war during the American Civil War."
+    },
+    {
+      "id": 41,
+      "title": "The Sound and the Fury",
+      "author": "William Faulkner",
+      "price": 12.99,
+      "quantity": 9,
+      "description": "The decline of the Compson family in the South."
+    },
+    {
+      "id": 42,
+      "title": "Sapiens: A Brief History of Humankind",
+      "author": "Yuval Noah Harari",
+      "price": 29.99,
+      "quantity": 7,
+    },
+    {
+      "id": 43,
+      "title": "The Color Purple",
+      "author": "Alice Walker",
+      "price": 9.99,
+      "quantity": 15,
+      "description": "The life and struggles of African-American women."
+    },
+    {
+      "id": 44,
+      "title": "The Metamorphosis",
+      "author": "Franz Kafka",
+      "price": 16.99,
+      "quantity": 4,
+      "description": "Gregor Samsa's transformation into a giant insect."
+    },
+    {
+      "id": 45,
+      "title": "The Shining",
+      "author": "Stephen King",
+      "price": 23.99,
+      "quantity": 8,
+      "description": "A family's descent into madness at an isolated hotel."
+    },
+    {
+      "id": 46,
+      "title": "Catch-22",
+      "author": "Joseph Heller",
+      "price": 11.99,
+      "quantity": 12,
+      "description": "Satirical portrayal of military bureaucracy."
+    },
+    {
+      "id": 47,
+      "title": "A Room of One's Own",
+      "author": "Virginia Woolf",
+      "price": 14.99,
+      "quantity": 6,
+      "description": "Feminist essay on women and literature."
+    },
+    {
+      "id": 48,
+      "title": "The Secret Garden",
+      "author": "Frances Hodgson Burnett",
+      "price": 9.99,
+      "quantity": 9,
+      "description": "A magical garden brings healing and growth."
+    },
+    {
+      "id": 49,
+      "title": "The Road",
+      "author": "Cormac McCarthy",
+      "price": 28.99,
+      "quantity": 4,
+      "description": "A father and son's journey in a post-apocalyptic world."
+    },
+    {
+      "id": 50,
+      "title": "The Adventures of Tom Sawyer",
+      "author": "Mark Twain",
+      "price": 15.99,
+      "quantity": 7
+    }
+  ]
+}
