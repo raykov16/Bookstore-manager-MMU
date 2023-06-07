@@ -2,16 +2,11 @@ namespace BookstoreManagment.Tests
 {
     public class BookstoreManagerTests
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
         [Test]
         public void SearchBooks_FindsTheCorrectBooks_IfTheyExist()
         {
             //Arange
-            BookstoreManager manager = new BookstoreManager(Config.jsonFilePathForTests);
+            BookstoreManager manager = new BookstoreManager(jsonPaths.jsonFilePathForTests);
 
             //Act
             var books = manager.SearchBooks("J.R.");
@@ -25,7 +20,7 @@ namespace BookstoreManagment.Tests
         public void SearchBooks_ReturnsNothing_IfNoBooksMatched()
         {
             //Arange
-            BookstoreManager manager = new BookstoreManager(Config.jsonFilePathForTests);
+            BookstoreManager manager = new BookstoreManager(jsonPaths.jsonFilePathForTests);
 
             //Act
             var books = manager.SearchBooks("nonExisting");
@@ -38,7 +33,7 @@ namespace BookstoreManagment.Tests
         public void AddNewBook_AddsTheBookToTheCollection_Successfully()
         {
             //Arange
-            BookstoreManager manager = new BookstoreManager(Config.jsonFilePathForTests);
+            BookstoreManager manager = new BookstoreManager(jsonPaths.jsonFilePathForTests);
             string title = "New Book";
             string author = "New author";
             decimal price = 10.00M;
@@ -61,7 +56,7 @@ namespace BookstoreManagment.Tests
         public void CalculateTotalValue_SumsTheValuesProperly()
         {
             //Arange
-            BookstoreManager manager = new BookstoreManager(Config.jsonFilePathForTests);
+            BookstoreManager manager = new BookstoreManager(jsonPaths.jsonFilePathForTests);
 
             //Act
             var value = manager.CalcualteTotalValue();
@@ -74,7 +69,7 @@ namespace BookstoreManagment.Tests
         public void ApplyDiscount_ReducesThePriceOfTheBooks()
         {
             //Arange
-            BookstoreManager manager = new BookstoreManager(Config.jsonFilePathForTests);
+            BookstoreManager manager = new BookstoreManager(jsonPaths.jsonFilePathForTests);
             decimal normalValue = manager.CalcualteTotalValue();
 
             //Act
@@ -89,7 +84,7 @@ namespace BookstoreManagment.Tests
         public void ApplyDiscount_ReducesThePriceOfTheBooksBy5Percent_WhenBooksCostLessThan15()
         {
             //Arange
-            BookstoreManager manager = new BookstoreManager(Config.jsonFilePathForTests);
+            BookstoreManager manager = new BookstoreManager(jsonPaths.jsonFilePathForTests);
 
             //Act
             manager.ApplyDiscounts();
@@ -102,7 +97,7 @@ namespace BookstoreManagment.Tests
         public void ApplyDiscount_ReducesThePriceOfTheBooksBy10Percent_WhenBooksCostBetween15And25()
         {
             //Arange
-            BookstoreManager manager = new BookstoreManager(Config.jsonFilePathForTests);
+            BookstoreManager manager = new BookstoreManager(jsonPaths.jsonFilePathForTests);
 
             //Act
             manager.ApplyDiscounts();
@@ -115,7 +110,7 @@ namespace BookstoreManagment.Tests
         public void ApplyDiscount_ReducesThePriceOfTheBooksBy15Percent_WhenBooksCostMoreThan25()
         {
             //Arange
-            BookstoreManager manager = new BookstoreManager(Config.jsonFilePathForTests);
+            BookstoreManager manager = new BookstoreManager(jsonPaths.jsonFilePathForTests);
 
             //Act
             manager.ApplyDiscounts();
@@ -128,7 +123,7 @@ namespace BookstoreManagment.Tests
         public void Save_CreatesFileWithTheData()
         {
             //Arange
-            BookstoreManager manager = new BookstoreManager(Config.jsonFilePathForTests);
+            BookstoreManager manager = new BookstoreManager(jsonPaths.jsonFilePathForTests);
 
             //Act
             string expectedOutput = manager.Save();

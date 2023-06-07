@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using BookstoreManagment.Contracts;
+using BookstoreManagment.Models;
 
 namespace BookstoreManagment
 {
@@ -7,22 +8,23 @@ namespace BookstoreManagment
     /// </summary>
     public class BookstoreManager
     {
-        private string path;
+        private IBookstoreService _bookstoreService;
+        private List<Book> _booksCollection;
 
-        public BookstoreManager(string jsonPath)
+        public BookstoreManager(IBookstoreService bookstoreService)
         {
-            path = jsonPath;
-            BooksCollection = GetBooksFromJson();
+            _bookstoreService = bookstoreService;
+            _booksCollection = _bookstoreService.GetBooksFromJson();
         }
 
-        public List<Book> BooksCollection { get; } = new List<Book>();
+        public IReadOnlyList<Book> BooksCollection => _booksCollection;
 
         /// <summary>
         /// Shows all available books in the books collection
         /// </summary>
         public void DisplayBooks()
         {
-            PrintTable(BooksCollection);
+            _bookstoreService.DisplayBooks(_booksCollection);
         }
 
         /// <summary>
@@ -32,13 +34,7 @@ namespace BookstoreManagment
         /// <returns>A list of the books that matched the criteria. Returns empty list if no books are matched.</returns>
         public List<Book> SearchBooks(string searchCriteria)
         {
-            searchCriteria = searchCriteria.ToLower();
-
-            return BooksCollection
-                .Where(
-                    b => b.Title.ToLower().Contains(searchCriteria)
-                    || b.Author.ToLower().Contains(searchCriteria))
-                .ToList();
+            return _bookstoreService.SearchBooks(_booksCollection, searchCriteria);
         }
 
         /// <summary>
@@ -51,19 +47,7 @@ namespace BookstoreManagment
         /// <param name="description">The description of the new book. String that is optional.</param>
         public void AddNewBook(string title, string author, decimal price, int quantity, string description)
         {
-            int id = BooksCollection[BooksCollection.Count - 1].Id + 1;
-
-            Book newBook = new Book()
-            {
-                Id = id,
-                Title = title,
-                Author = author,
-                Price = price,
-                Quantity = quantity,
-                Description = description
-            };
-
-            BooksCollection.Add(newBook);
+            _bookstoreService.AddNewBook(title, author, price, quantity, description, _booksCollection);
         }
 
         /// <summary>
@@ -72,9 +56,7 @@ namespace BookstoreManagment
         /// <returns>The sum of all books prices.</returns>
         public decimal CalcualteTotalValue()
         {
-            decimal totalValue = BooksCollection.Sum(b => b.Quantity * b.Price);
-
-            return totalValue;
+            return _bookstoreService.CalcualteTotalValue(_booksCollection);
         }
 
         /// <summary>
@@ -82,25 +64,7 @@ namespace BookstoreManagment
         /// </summary>
         public void ApplyDiscounts()
         {
-            foreach (var book in BooksCollection)
-            {
-                decimal discount = 0;
-
-                if (book.Price < 15)
-                {
-                    discount = 0.05M;
-                }
-                else if (book.Price >= 15 && book.Price <= 25)
-                {
-                    discount = 0.1M;
-                }
-                else
-                {
-                    discount = 0.15M;
-                }
-
-                book.Price = book.Price - (book.Price * discount);
-            }
+            _bookstoreService.ApplyDiscounts(_booksCollection);
         }
 
         /// <summary>
@@ -109,76 +73,7 @@ namespace BookstoreManagment
         /// <returns>The json file that is going to be saved as a string.</returns>
         public string Save()
         {
-            JsonDTO dto = new JsonDTO()
-            {
-                Books = BooksCollection.ToArray()
-            };
-
-            string json = JsonConvert.SerializeObject(dto, Formatting.Indented);
-
-            File.WriteAllText("../../../BookstoreManagementOutput.json", json);
-
-            return json;
-        }
-
-        /// <summary>
-        /// Converts a json to a list of books
-        /// </summary>
-        /// <returns>List of books</returns>
-        private List<Book> GetBooksFromJson()
-        {
-            string json = File.ReadAllText(path);
-            JsonDTO jsonObject = JsonConvert.DeserializeObject<JsonDTO>(json);
-
-            return jsonObject.Books.ToList();
-        }
-
-        /// <summary>
-        /// Prints a table with books.
-        /// </summary>
-        /// <param name="books">List of books to be printed.</param>
-        public void PrintTable(List<Book> books)
-        {
-            if (books.Count == 0)
-            {
-                Console.WriteLine(ApplicationMessages.NoMatchingBooks);
-                return;
-            }
-
-            int longestTitleLength = 0;
-            int longestAuthorLength = 0;
-
-            foreach (var b in books)
-            {
-                if (b.Title.Length > longestTitleLength)
-                {
-                    longestTitleLength = b.Title.Length;
-                }
-
-                if (b.Author.Length > longestAuthorLength)
-                {
-                    longestAuthorLength = b.Author.Length;
-                }
-            }
-
-            //Calculates the spaces needed to make the table responsilbe and all columns equal
-            Console.WriteLine($"\nID  | Title{new string(' ', longestTitleLength - 5)}| Author{new string(' ', longestAuthorLength - 6)}| Price  | Quantity  | Description\n");
-            Console.WriteLine("------------------------------------------------------------------------------------------------------------------------\n");
-
-            foreach (Book book in books)
-            {
-
-                //Calculates the spaces needed to make the table responsilbe and all columns equal
-                string id = book.Id <= 9 ? $"{book.Id}   " : $"{book.Id}  ";
-                string price = book.Price <= 9.99M ? $" {book.Price:f2}   " : $" {book.Price:f2}  ";
-                string quantity = book.Quantity <= 9 ? $" {book.Quantity}         " : $" {book.Quantity}        ";
-
-                Console.WriteLine($"{id}| {book.Title}{new string(' ', longestTitleLength - book.Title.Length)}" +
-                    $"| {book.Author}{new string(' ', longestAuthorLength - book.Author.Length)}" +
-                    $"| {price}| {quantity}| {book.Description}\n");
-            }
-
-            Console.WriteLine();
+            return _bookstoreService.Save(_booksCollection);
         }
     }
 }

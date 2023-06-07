@@ -33,5 +33,7 @@
         public static string BookCollectionSaved = "\nBook collection saved to JSON file: BookstoreManagementOutput.json.";
 
         public static string NoMatchingBooks = "No matching books!";
+
+        public static string BooksNotSaved = "The books were not saved because the following error occured: {0}";
     }
 }

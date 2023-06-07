@@ -1,4 +1,6 @@
-﻿using static BookstoreManagment.ApplicationMessages;
+﻿using BookstoreManagment.Contracts;
+using BookstoreManagment.Models;
+using static BookstoreManagment.ApplicationMessages;
 
 namespace BookstoreManagment
 {
@@ -6,21 +8,19 @@ namespace BookstoreManagment
     {
         static void Main(string[] args)
         {
-            BookstoreManager manager = new BookstoreManager(Config.jsonFilePath);
+            IBookPrinter bookPrinter = new BookPrinter();
+            IConfig config = new Config();
 
-            LoadMenu(manager);
+            IBookstoreService bookstoreService = new BookstoreService(bookPrinter, config);
+
+            BookstoreManager manager = new BookstoreManager(bookstoreService);
+
+            LoadMenu(manager, bookPrinter);
         }
 
-        public static void LoadMenu(BookstoreManager manager)
+        public static void LoadMenu(BookstoreManager manager, IBookPrinter bookPrinter)
         {
-            Console.WriteLine("\n========== Bookstore Management ==========");
-            Console.WriteLine("1. Display Books\n");
-            Console.WriteLine("2. Search Books\n");
-            Console.WriteLine("3. Add New Book\n");
-            Console.WriteLine("4. Calculate Total Value\n");
-            Console.WriteLine("5. Apply Discounts\n");
-            Console.WriteLine("6. Save\n\n\n");
-            Console.WriteLine("Enter your choice (1-6):");
+            bookPrinter.PrintMenu();
 
             int option;
             bool isValid = int.TryParse(Console.ReadLine(), out option);
@@ -35,7 +35,7 @@ namespace BookstoreManagment
             {
                 case 1:
                     manager.DisplayBooks();
-                    LoadMenu(manager);
+                    LoadMenu(manager, bookPrinter);
 
                     break;
                 case 2:
@@ -45,9 +45,9 @@ namespace BookstoreManagment
 
                     var books = manager.SearchBooks(searchCriteria);
 
-                    manager.PrintTable(books);
+                    bookPrinter.PrintTable(books);
 
-                    LoadMenu(manager);
+                    LoadMenu(manager, bookPrinter);
 
                     break;
                 case 3:
@@ -104,33 +104,33 @@ namespace BookstoreManagment
 
                     Console.WriteLine(NewBookAdded);
 
-                    LoadMenu(manager);
+                    LoadMenu(manager, bookPrinter);
                     break;
                 case 4:
                     decimal totalValue = manager.CalcualteTotalValue();
 
                     Console.WriteLine(string.Format(TotalBookstoreValue, totalValue));
 
-                    LoadMenu(manager);
+                    LoadMenu(manager, bookPrinter);
                     break;
                 case 5:
                     manager.ApplyDiscounts();
 
                     Console.WriteLine(DiscountsApplied);
 
-                    LoadMenu(manager);
+                    LoadMenu(manager, bookPrinter);
                     break;
                 case 6:
                     manager.Save();
 
                     Console.WriteLine(BookCollectionSaved);
 
-                    LoadMenu(manager);
+                    LoadMenu(manager, bookPrinter);
                     break;
                 default:
                     Console.WriteLine(EnterNumberBetween);
 
-                    LoadMenu(manager);
+                    LoadMenu(manager, bookPrinter);
                     break;
             }
         }
