@@ -1,4 +1,6 @@
-﻿namespace BookstoreManagment.Models
+﻿using BookstoreManagment.Models;
+
+namespace BookstoreManagment.DTOs
 {
     public class JsonDTO
     {

@@ -5,7 +5,7 @@
         public static string EnterKeyword = "\nEnter a keyword to search: ";
 
         public static string EnterValidNumber = "Enter a valid number!";
-        public static string EnterNumberBetween = "Enter a valid number between 1 and 6!";
+        public static string EnterNumberBetween = "Enter a valid number between 1 and 7!";
 
         public static string AddBookMenu = "\nThis is the add book menu: \n";
 
@@ -35,5 +35,7 @@
         public static string NoMatchingBooks = "No matching books!";
 
         public static string BooksNotSaved = "The books were not saved because the following error occured: {0}";
+
+        public static string ExitingMenu = "You have exited!";
     }
 }

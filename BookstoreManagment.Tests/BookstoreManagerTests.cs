@@ -1,3 +1,5 @@
+using BookstoreManagment.Models;
+
 namespace BookstoreManagment.Tests
 {
     public class BookstoreManagerTests
